@@ -22,8 +22,6 @@
 
 * An unfeasibly short introduction to clojure                         :slide:
 
-
-
 #+TAGS: slide(s) notes(n)
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="common.css" />
