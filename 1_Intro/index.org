@@ -46,13 +46,13 @@
 * org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
 
-#+STYLE: <link rel="stylesheet" type="text/css" href="common.css" />
-#+STYLE: <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
-#+STYLE: <link rel="stylesheet" type="text/css" href="projection.css" media="projection" />
-#+STYLE: <link rel="stylesheet" type="text/css" href="presenter.css" media="presenter" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="../org-html-slideshow/common.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="../org-html-slideshow/screen.css" media="screen" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="../org-html-slideshow/projection.css" media="projection" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="../org-html-slideshow/presenter.css" media="presenter" />
 
 #+BEGIN_HTML
-<script type="text/javascript" src="org-html-slideshow.js"></script>
+<script type="text/javascript" src="../org-html-slideshow/org-html-slideshow.js"></script>
 #+END_HTML
 
 # Local Variables:
