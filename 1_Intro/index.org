@@ -1,27 +1,49 @@
-* Functional programming for the dysfunctional programmer             :slide:
+#+TITLE: Functional Programming for the Dysfunctional Programmer
+#+AUTHOR: Matthew Gilliard and Thom Leggett
 
-* Who are we?                                                         :slide:
-  + Matthew Gilliard
-    * Twitter: [[https://twitter.com/mjgilliard][@mjgilliard]]
-  + Thom Leggett
-    * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
+* Functional Programming for the Dysfunctional Programmer             :slide:
+** Prelude
+*** Who are we?                                                       :slide:
+    + Matthew Gilliard
+      * Twitter: [[https://twitter.com/mjgilliard][@mjgilliard]]
+    + Thom Leggett
+      * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
 
-* Who are you?                                                        :slide:
-   + Introduce yourselves to your table
-   + What do you know about functional programming?
-   + What languages do you use day-to-day?
+*** Who are you?                                                      :slide:
+    + Introduce yourselves to your table.
+    + What do you know about functional programming?
+    + What languages do you use day-to-day?
 
-* What is functional programming?                                     :slide:
-** Notes                                                              :notes:
-   + Languages on post-its
-   + Functional to dynfunctional scale
-   + Functional definitions
-   + Next steps
+** What is functional programming?                                    :slide:
+*** Notes                                                             :notes:
+    + Languages on post-its.
+    + Functional to dysfunctional scale.
+    + Functional definitions.
+    + Next steps.
 
-* Clooj                                                               :slide:
+** An unfeasibly short introduction to clojure                        :slide:
 
-* An unfeasibly short introduction to clojure                         :slide:
+*** Clooj                                                             :slide:
+    http://j.mp/clooj-accu2013 or from USB stick.
+    + Simple self-contained IDE for clojure.
+    + Project, file and repl.
+    + Rough edges.
+**** Clooj Notes                                                      :notes:
+     + Restart the REPL from REPL menu or C-r to get it working.
+     + Use projects or it won't work.
 
+*** REPL?                                                             :slide:
+    + Read, eval, print, loop.
+
+    #+BEGIN_SRC clojure
+    user => (use 'clojure.repl)
+    #+END_SRC
+
+*** Clojure                                                           :slide:
+    + Find intro-to-clojure directory.
+    + Open project.clj in your shiny new clooj installation.
+
+* org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
 
 #+STYLE: <link rel="stylesheet" type="text/css" href="common.css" />
@@ -36,4 +58,4 @@
 # Local Variables:
 # org-export-html-style-include-default: nil
 # org-export-html-style-include-scripts: nil
-# End:
+  # End:
