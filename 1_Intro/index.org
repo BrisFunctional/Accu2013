@@ -2,17 +2,16 @@
 #+AUTHOR: Matthew Gilliard and Thom Leggett
 
 * Functional Programming for the Dysfunctional Programmer             :slide:
-** Prelude
-*** Who are we?                                                       :slide:
-    + Matthew Gilliard
-      * Twitter: [[https://twitter.com/mjgilliard][@mjgilliard]]
-    + Thom Leggett
-      * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
+** Who are we?                                                        :slide:
+   + Matthew Gilliard
+     * Twitter: [[https://twitter.com/mjgilliard][@mjgilliard]]
+   + Thom Leggett
+     * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
 
-*** Who are you?                                                      :slide:
-    + Introduce yourselves to your table.
-    + What do you know about functional programming?
-    + What languages do you use day-to-day?
+** Who are you?                                                       :slide:
+   + Introduce yourselves to your table.
+   + What do you know about functional programming?
+   + What languages do you use day-to-day?
 
 ** What is functional programming?                                    :slide:
 *** Notes                                                             :notes:
@@ -23,25 +22,25 @@
 
 ** An unfeasibly short introduction to clojure                        :slide:
 
-*** Clooj                                                             :slide:
-    http://j.mp/clooj-accu2013 or from USB stick.
-    + Simple self-contained IDE for clojure.
-    + Project, file and repl.
-    + Rough edges.
-**** Clooj Notes                                                      :notes:
-     + Restart the REPL from REPL menu or C-r to get it working.
-     + Use projects or it won't work.
+** Clooj                                                              :slide:
+   http://j.mp/clooj-accu2013 or from USB stick.
+   + Simple self-contained IDE for clojure.
+   + Project, file and repl.
+   + Rough edges.
+*** Notes                                                             :notes:
+    + Restart the REPL from REPL menu or =C-r= to get it working.
+    + Use projects or it won't work.
 
-*** REPL?                                                             :slide:
-    + Read, eval, print, loop.
+** REPL?                                                              :slide:
+   + Read, eval, print, loop.
 
-    #+BEGIN_SRC clojure
-    user => (use 'clojure.repl)
-    #+END_SRC
+   #+BEGIN_SRC clojure
+   user => (use 'clojure.repl)
+   #+END_SRC
 
-*** Clojure                                                           :slide:
-    + Find intro-to-clojure directory.
-    + Open project.clj in your shiny new clooj installation.
+** Clojure                                                            :slide:
+   + Find 1_Intro/intro-to-clojure directory.
+   + Open project.clj in your shiny new clooj installation.
 
 * org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
@@ -54,6 +53,12 @@
 #+BEGIN_HTML
 <script type="text/javascript" src="../org-html-slideshow/org-html-slideshow.js"></script>
 #+END_HTML
+
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
 
 # Local Variables:
 # org-export-html-style-include-default: nil
