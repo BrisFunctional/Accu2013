@@ -2,11 +2,14 @@
 #+AUTHOR: Matthew Gilliard and Thom Leggett
 
 * Functional Programming for the Dysfunctional Programmer             :slide:
-** Who are we?                                                        :slide:
+** Who  are we?                                                       :slide:
    + Matthew Gilliard
      * Twitter: [[https://twitter.com/mjgilliard][@mjgilliard]]
    + Thom Leggett
      * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
+   + BrisFunctional
+     * Twitter: [[http://twitter.com/BrisFunctional][@BrisFunctional]]
+     * Web: [[http://brisfunctional.github.com]]
 
 ** Who are you?                                                       :slide:
    + Introduce yourselves to your table.
@@ -19,6 +22,17 @@
     + Functional to dysfunctional scale.
     + Functional definitions.
     + Next steps.
+*** Wikipedia                                                         :slide:
+    + "[FP] treats computation as the evaluation of mathematical functions and avoids state and mutable data."
+    + [[http://en.wikipedia.org/wiki/Functional_Programming]]
+*** Python.org                                                        :slide:
+    + "the opposite of object-oriented programming"
+    + [[http://docs.python.org/2/howto/functional.html]]
+*** Robert C Martin ([[http://twitter.com/UncleBob][@UncleBob]])                                       :slide:
+    + "is programming without assignment statements"
+    + [[http://pragprog.com/magazines/2013-01/functional-programming-basics]]
+
+
 
 ** An unfeasibly short introduction to clojure                        :slide:
 
