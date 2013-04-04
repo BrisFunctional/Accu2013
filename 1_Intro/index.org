@@ -31,8 +31,14 @@
 *** Robert C Martin ([[http://twitter.com/UncleBob][@UncleBob]])                                       :slide:
     + "is programming without assignment statements"
     + [[http://pragprog.com/magazines/2013-01/functional-programming-basics]]
-
-
+** So what?                                                           :slide:
+*** Notes                                                             :notes:
+    + Mainly uses immutable data types
+    + And side-effect-free functions
+    + So:
+      * order of execution is not important
+      * functions can be memoized
+      * concurrent programming becomes easier
 
 ** An unfeasibly short introduction to clojure                        :slide:
 

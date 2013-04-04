@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional Programming for the Dysfunctional Programmer"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-04T19:48+0100"/>
+<meta name="generated" content="2013-04-04T20:01+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -138,14 +138,19 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-3-4">1.3.4 Robert C Martin (@UncleBob)</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-4">1.4 An unfeasibly short introduction to clojure</a></li>
-<li><a href="#sec-1-5">1.5 Clooj</a>
+<li><a href="#sec-1-4">1.4 so?</a>
 <ul>
-<li><a href="#sec-1-5-1">1.5.1 Notes</a></li>
+<li><a href="#sec-1-4-1">1.4.1 Notes</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-6">1.6 REPL?</a></li>
-<li><a href="#sec-1-7">1.7 Clojure</a></li>
+<li><a href="#sec-1-5">1.5 An unfeasibly short introduction to clojure</a></li>
+<li><a href="#sec-1-6">1.6 Clooj</a>
+<ul>
+<li><a href="#sec-1-6-1">1.6.1 Notes</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-7">1.7 REPL?</a></li>
+<li><a href="#sec-1-8">1.8 Clojure</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2 org-html-slideshow incantations</a></li>
@@ -259,7 +264,7 @@ for the JavaScript code in this tag.
 <div class="outline-text-4" id="text-1-3-3">
 
 <ul>
-<li>"&hellip; the opposite of object-oriented programming"
+<li>"the opposite of object-oriented programming"
 </li>
 <li><a href="http://docs.python.org/2/howto/functional.html">http://docs.python.org/2/howto/functional.html</a>
 </li>
@@ -274,9 +279,43 @@ for the JavaScript code in this tag.
 <div class="outline-text-4" id="text-1-3-4">
 
 <ul>
-<li>"&hellip; is programming without assignment statements."
+<li>"is programming without assignment statements"
 </li>
 <li><a href="http://pragprog.com/magazines/2013-01/functional-programming-basics">http://pragprog.com/magazines/2013-01/functional-programming-basics</a>
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> so? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+</div>
+
+<div id="outline-container-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-4-1">
+
+<ul>
+<li>Mainly uses immutable data types
+</li>
+<li>And side-effect-free functions
+</li>
+<li>So:
+<ul>
+<li>order of execution is not important
+</li>
+<li>functions can be memoized
+</li>
+<li>concurrent programming becomes easier
+</li>
+</ul>
+
 </li>
 </ul>
 
@@ -286,18 +325,18 @@ for the JavaScript code in this tag.
 
 </div>
 
-<div id="outline-container-1-4" class="outline-3">
-<h3 id="sec-1-4"><span class="section-number-3">1.4</span> An unfeasibly short introduction to clojure &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-1-4">
-
-
-</div>
-
-</div>
-
 <div id="outline-container-1-5" class="outline-3">
-<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Clooj &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> An unfeasibly short introduction to clojure &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-1-5">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Clooj &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-1-6">
 
 <p>   <a href="http://j.mp/clooj-accu2013">http://j.mp/clooj-accu2013</a> or from USB stick.
 </p><ul>
@@ -312,9 +351,9 @@ for the JavaScript code in this tag.
 
 </div>
 
-<div id="outline-container-1-5-1" class="outline-4">
-<h4 id="sec-1-5-1"><span class="section-number-4">1.5.1</span> Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
-<div class="outline-text-4" id="text-1-5-1">
+<div id="outline-container-1-6-1" class="outline-4">
+<h4 id="sec-1-6-1"><span class="section-number-4">1.6.1</span> Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-6-1">
 
 <ul>
 <li>Restart the REPL from REPL menu or <code>C-r</code> to get it working.
@@ -329,9 +368,9 @@ for the JavaScript code in this tag.
 
 </div>
 
-<div id="outline-container-1-6" class="outline-3">
-<h3 id="sec-1-6"><span class="section-number-3">1.6</span> REPL? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> REPL? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-1-7">
 
 <ul>
 <li>Read, eval, print, loop.
@@ -350,9 +389,9 @@ for the JavaScript code in this tag.
 
 </div>
 
-<div id="outline-container-1-7" class="outline-3">
-<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Clojure &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Clojure &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-1-8">
 
 <ul>
 <li>Find 1_Intro/intro-to-clojure directory.
@@ -383,7 +422,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-04T19:48+0100</p>
+<p class="date">Date: 2013-04-04T20:01+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
