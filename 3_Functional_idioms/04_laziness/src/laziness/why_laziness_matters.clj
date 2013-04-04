@@ -21,6 +21,6 @@
   (drop-while #(> 3 (apply + %)) 
               (map #(take % reciprocals) (range))))
 
-;; This would be do using a `for` or a `while` without laziness
+;; This would be done using a `for` or a `while` without laziness
 ;; but using a lazy seq allows us to decouple
 ;; generation of the values, and the terminating condition
