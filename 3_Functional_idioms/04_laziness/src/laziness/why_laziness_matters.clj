@@ -18,7 +18,7 @@
 ;; What is the shortest list of reciprocals whose sum
 ;; is greater than 3?
 (first
-  (drop-while #(> 3 (reduce + %)) 
+  (drop-while #(> 3 (apply + %)) 
               (map #(take % reciprocals) (range))))
 
 ;; This would be do using a `for` or a `while` without laziness
