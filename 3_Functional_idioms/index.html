@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-04T20:06+0100"/>
+<meta name="generated" content="2013-04-04T20:14+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -128,10 +128,26 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#sec-1">1 Functional Idioms</a>
 <ul>
-<li><a href="#sec-1-1">1.1 Map Reduce</a></li>
-<li><a href="#sec-1-2">1.2 Immutability</a></li>
-<li><a href="#sec-1-3">1.3 Higher-Order Functions</a></li>
-<li><a href="#sec-1-4">1.4 Laziness</a></li>
+<li><a href="#sec-1-1">1.1 Map Reduce</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1 Thom's notes</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2 Immutability</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1 Matthew's notes</a></li>
+<li><a href="#sec-1-2-2">1.2.2 Persistent data</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3 Higher-Order Functions</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1 Thom's notes</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-4">1.4 Laziness</a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1 Matthew's notes</a></li>
+</ul></li>
 </ul>
 </li>
 <li><a href="#sec-2">2 org-html-slideshow incantations</a></li>
@@ -150,6 +166,14 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-1"><span class="section-number-3">1.1</span> Map Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-1-1">
 
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Thom's notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+</div>
 </div>
 
 </div>
@@ -158,6 +182,50 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-2"><span class="section-number-3">1.2</span> Immutability &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-1-2">
 
+
+</div>
+
+<div id="outline-container-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Matthew's notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-2-1">
+
+<ul>
+<li>A common objection - SO SLOW
+</li>
+<li>Can be implemented with copy-on-write
+<ul>
+<li>Write grabs a lock to prevent simultaneous writes
+</li>
+<li>Makes a complete copy
+</li>
+<li>Reads are never locked out
+</li>
+</ul>
+
+</li>
+<li>Better to use persistent datastructures
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Persistent data &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-2">
+
+<ul>
+<li>"a data structure that always preserves the previous version of itself when it is modified."
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Persistent_data_structure">wikipedia of course :)</a>
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
 </div>
 
 </div>
@@ -166,6 +234,14 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-3"><span class="section-number-3">1.3</span> Higher-Order Functions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-1-3">
 
+
+</div>
+
+<div id="outline-container-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Thom's notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-3-1">
+
+</div>
 </div>
 
 </div>
@@ -175,6 +251,19 @@ for the JavaScript code in this tag.
 <div class="outline-text-3" id="text-1-4">
 
 
+</div>
+
+<div id="outline-container-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Matthew's notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
+<div class="outline-text-4" id="text-1-4-1">
+
+<ul>
+<li>
+</li>
+</ul>
+
+
+</div>
 </div>
 </div>
 
@@ -196,7 +285,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-04T20:06+0100</p>
+<p class="date">Date: 2013-04-04T20:14+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

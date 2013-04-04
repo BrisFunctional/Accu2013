@@ -3,9 +3,26 @@
 
 * Functional Idioms                                                   :slide:
 ** Map Reduce                                                         :slide:
+*** Thom's notes                                                      :notes:
 ** Immutability                                                       :slide:
+*** Matthew's notes                                                   :notes:
+  + A common objection - SO SLOW
+  + Can be implemented with copy-on-write
+    * Write grabs a lock to prevent simultaneous writes
+    * Makes a complete copy
+    * Reads are never locked out
+  + Better to use persistent datastructures
+*** Persistent data                                                   :slide:
+  + "a data structure that always preserves the previous version of itself when it is modified."
+    * [[http://en.wikipedia.org/wiki/Persistent_data_structure][wikipedia of course :)]]
+*** Structural sharing                                                :slide:
+  + Lets do an example...
+
 ** Higher-Order Functions                                             :slide:
+*** Thom's notes                                                      :notes:
 ** Laziness                                                           :slide:
+*** Matthew's notes                                                   :notes:
+  +
 
 * org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
