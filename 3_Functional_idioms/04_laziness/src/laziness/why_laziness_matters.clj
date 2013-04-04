@@ -8,7 +8,7 @@
 
 ;; an infinite sequence
 (def reciprocals
-  (map #(/ 1 (inc %)) (range)))
+  (map #(/ 1 %) (next (range))))
 
 
 ;; the first few terms
@@ -19,7 +19,7 @@
 ;; is greater than 3?
 (first
   (drop-while #(> 3 (reduce + %)) 
-              (map #(take (inc %) reciprocals) 
+              (map #(take % reciprocals) 
                    (range))))
 
 ;; This would be do using a `for` or a `while` without laziness
