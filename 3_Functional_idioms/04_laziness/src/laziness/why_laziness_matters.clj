@@ -19,8 +19,7 @@
 ;; is greater than 3?
 (first
   (drop-while #(> 3 (reduce + %)) 
-              (map #(take % reciprocals) 
-                   (range))))
+              (map #(take % reciprocals) (range))))
 
 ;; This would be do using a `for` or a `while` without laziness
 ;; but using a lazy seq allows us to decouple
