@@ -22,6 +22,10 @@
     + Functional to dysfunctional scale.
     + Functional definitions.
     + Next steps.
+*** John Hughes (Why Functional Programming Matters)                  :slide:
+    + "Functional programming is so called because its fundamental operation is
+the application of functions to arguments"
+    + [[http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html]]
 *** Wikipedia                                                         :slide:
     + "[FP] treats computation as the evaluation of mathematical functions and avoids state and mutable data."
     + [[http://en.wikipedia.org/wiki/Functional_Programming]]
@@ -31,6 +35,9 @@
 *** Robert C Martin ([[http://twitter.com/UncleBob][@UncleBob]])                                       :slide:
     + "is programming without assignment statements"
     + [[http://pragprog.com/magazines/2013-01/functional-programming-basics]]
+
+
+
 ** So what?                                                           :slide:
 *** Notes                                                             :notes:
     + Mainly uses immutable data types

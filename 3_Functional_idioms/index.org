@@ -12,17 +12,26 @@
     * Makes a complete copy
     * Reads are never locked out
   + Better to use persistent datastructures
-*** Persistent data                                                   :slide:
+*** Persistent data structures                                        :slide:
   + "a data structure that always preserves the previous version of itself when it is modified."
     * [[http://en.wikipedia.org/wiki/Persistent_data_structure][wikipedia of course :)]]
 *** Structural sharing                                                :slide:
+  + A way of making persistent data structures efficiently
   + Lets do an example...
+*** Language support                                                  :slide:
+  + JavaScript (ES5) & Ruby
+    * Object.freeze();
+  + Java
+    * final keyword; // not really :(
+  + What about $your_favourite_language ?
+  + If no language support, are there libraries?
+    * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
 *** Thom's notes                                                      :notes:
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:
-  +
+  + See the example
 
 * org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
