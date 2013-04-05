@@ -1,6 +1,7 @@
 (ns laziness.examples)
 
 ;; an infinite sequence (evaluate it if you want to find out...)
+;; (but check the jeyboard shortcut for 'kill repl' first ;)
 (range)
 
 ;; but, still, we can do
