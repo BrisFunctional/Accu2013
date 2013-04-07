@@ -13,11 +13,20 @@
 (def classified 
   (map (comp classify #(:score %)) surveys))
 
-(defn nps [a b]
+(defn group [a b]
   (let [c (assoc a :items (inc (:items a)))]
     (condp = b
       :promoter (assoc c :promoters (inc (:promoters c)))
       :passive c
       :detractor (assoc c :detractors (inc (:detractors c))))))
 
-(reduce nps {:items 0 :promoters 0 :detractors 0} classified)
+(def counts 
+  (reduce group {:items 0 :promoters 0 :detractors 0} classified))
+
+(def nps
+  (* 100 
+     (/ 
+       (- (counts :promoters) (counts :detractors)) 
+       (counts :items))))
+
+(float nps)
