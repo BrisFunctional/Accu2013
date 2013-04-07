@@ -89,23 +89,44 @@
   + JavaScript
     + Totally!
 *** Haskell type notation                                             :slide:
-#+BEGIN_SRC haskell
-cons :: a -> [a] -> [a]
-compose :: (b -> c) -> (a -> b) -> a -> c
-map :: (a -> b) -> [a] -> [b]
-filter :: (a -> Bool) -> [a] -> [a]
-reduce :: (a -> b -> a) -> a -> [b] -> a
-#+END_SRC
+  #+BEGIN_SRC haskell
+  cons :: a -> [a] -> [a]
+  comp :: (b -> c) -> (a -> b) -> a -> c
+  map :: (a -> b) -> [a] -> [b]
+  filter :: (a -> Bool) -> [a] -> [a]
+  reduce :: (a -> b -> a) -> a -> [b] -> a
+  #+END_SRC
 *** Notes                                                             :notes:
-    + Currying
+  + Currying
+*** Composition                                                       :slide:
+  #+BEGIN_SRC haskell
+  comp :: (b -> c) -> (a -> b) -> a -> c
+  #+END_SRC
+  + Takes two functions, f and g.
+  + Returns a new function x -> f(g(x)).
 *** Map                                                               :slide:
-#+BEGIN_SRC haskell
-map :: (a -> b) -> [a] -> [b]
-#+END_SRC
-  + Takes a function and a list. Returns a new list with the results of applying the function to all elements of the list in order.
+  #+BEGIN_SRC haskell
+  map :: (a -> b) -> [a] -> [b]
+  #+END_SRC
+  + Takes a function and a list.
+  + Returns a new list with the results of applying the function to all
+    elements of the list in order.
 *** Filter                                                            :slide:
+  #+BEGIN_SRC haskell
+  filter :: (a -> Bool) -> [a] -> [a]
+  #+END_SRC
+  + Takes a predicate and a list.
+  + Returns a new list containing only items which, when passed to the
+    predicate, the predicate returned true.
 *** Reduce                                                            :slide:
-*** Compose                                                           :slide:
+  #+BEGIN_SRC haskell
+  reduce :: (a -> b -> a) -> a -> [b] -> a
+  #+END_SRC
+  + Takes a function that combines two values in some way, an initial value
+    and a list.
+  + Returns a value obtained by passing the first item of the list and the
+    initial value to the function, then calls the function with the result
+    of the last call and the second item of the list etc.
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:
   + See the example

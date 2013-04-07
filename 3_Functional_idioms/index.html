@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-07T23:13+0100"/>
+<meta name="generated" content="2013-04-07T23:30+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -157,11 +157,10 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-2-2">1.2.2 Closures and lambdas</a></li>
 <li><a href="#sec-1-2-3">1.2.3 Speaks your language?</a></li>
 <li><a href="#sec-1-2-4">1.2.4 Haskell type notation</a></li>
-<li><a href="#sec-1-2-5">1.2.5 Notes</a></li>
-<li><a href="#sec-1-2-6">1.2.6 Map</a></li>
-<li><a href="#sec-1-2-7">1.2.7 Filter</a></li>
-<li><a href="#sec-1-2-8">1.2.8 Reduce</a></li>
-<li><a href="#sec-1-2-9">1.2.9 Compose</a></li>
+<li><a href="#sec-1-2-5">1.2.5 Map</a></li>
+<li><a href="#sec-1-2-6">1.2.6 Filter</a></li>
+<li><a href="#sec-1-2-7">1.2.7 Reduce</a></li>
+<li><a href="#sec-1-2-8">1.2.8 Compose</a></li>
 </ul>
 </li>
 <li><a href="#sec-1-3">1.3 Laziness</a>
@@ -579,26 +578,22 @@ for the JavaScript code in this tag.
 <span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
 </pre>
 
-</div>
-
-</div>
-
-<div id="outline-container-1-2-5" class="outline-4">
-<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
-<div class="outline-text-4" id="text-1-2-5">
-
+<ul>
+<li id="sec-1-2-4-1">Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span><br/>
 <ul>
 <li>Currying
 </li>
 </ul>
 
+</li>
+</ul>
 </div>
 
 </div>
 
-<div id="outline-container-1-2-6" class="outline-4">
-<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
-<div class="outline-text-4" id="text-1-2-6">
+<div id="outline-container-1-2-5" class="outline-4">
+<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-5">
 
 
 
@@ -607,7 +602,32 @@ for the JavaScript code in this tag.
 </pre>
 
 <ul>
-<li>Takes a function and a list. Returns a new list with the results of applying the function to all elements of the list in order.
+<li>Takes a function and a list.
+</li>
+<li>Returns a new list with the results of applying the function to all
+    elements of the list in order.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-6" class="outline-4">
+<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-6">
+
+
+
+
+<pre class="src src-haskell"><span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+</pre>
+
+<ul>
+<li>Takes a predicate and a list.
+</li>
+<li>Returns a new list containing only items which, when passed to the
+    predicate, the predicate returned true.
 </li>
 </ul>
 
@@ -616,24 +636,32 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-7" class="outline-4">
-<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-7">
+
+
+
+
+<pre class="src src-haskell"><span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
+</pre>
+
+<ul>
+<li>Takes a function that combines two values in some way, an initial value
+    and a list.
+</li>
+<li>Returns a value obtained by passing the first item of the list and the
+    initial value to the function, then calls the function with the result
+    of the last call and the second item of the list etc.
+</li>
+</ul>
 
 </div>
 
 </div>
 
 <div id="outline-container-1-2-8" class="outline-4">
-<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> Compose &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-8">
-
-</div>
-
-</div>
-
-<div id="outline-container-1-2-9" class="outline-4">
-<h4 id="sec-1-2-9"><span class="section-number-4">1.2.9</span> Compose &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
-<div class="outline-text-4" id="text-1-2-9">
 
 </div>
 </div>
@@ -679,7 +707,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-07T23:13+0100</p>
+<p class="date">Date: 2013-04-07T23:30+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
