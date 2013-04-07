@@ -96,8 +96,8 @@
   filter :: (a -> Bool) -> [a] -> [a]
   reduce :: (a -> b -> a) -> a -> [b] -> a
   #+END_SRC
-*** Notes                                                             :notes:
-  + Currying
+**** Notes                                                            :notes:
+   + Currying
 *** Composition                                                       :slide:
   #+BEGIN_SRC haskell
   comp :: (b -> c) -> (a -> b) -> a -> c
@@ -143,7 +143,7 @@
 <script type="text/javascript" src="../org-html-slideshow/org-html-slideshow.js"></script>
 #+END_HTML
 
-#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   H:6 num:t toc:t \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
