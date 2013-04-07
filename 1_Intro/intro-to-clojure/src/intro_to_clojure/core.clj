@@ -50,13 +50,25 @@
 ;; challenge - fibonacci series
 ;; here's an idiomatic clojure version
 ;; can you work out how this works?
-(defn fib []
-    (map first (iterate (fn [[a b]] [b (+ a b)]) [0 1])))
+(def fib 
+  (map first (iterate (fn [[a b]] [b (+ a b)]) [0 1])))
 
-(take 10 (fib))
+;; this is my favorite definition
+(def fibo 
+  (lazy-cat [0 1] (map + fibo (rest fibo))))
+
+(= 
+  (take 42 fib)
+  (take 42 fibo))
 
 ;; your turn - have a go at implementing your
 ;;  own fib
-(defn you-fibber []
+(def you-fibber
   ;; fill in the blanks
+  [0 1]
   )
+
+(= 
+  (take 42 fib)
+  (take 42 fibo)
+  (take 42 you-fibber))
