@@ -15,16 +15,60 @@
 *** Persistent data structures                                        :slide:
   + "a data structure that always preserves the previous version of itself when it is modified."
     * [[http://en.wikipedia.org/wiki/Persistent_data_structure][wikipedia of course :)]]
+  + (nothing to do with database-style persistence)
 *** Structural sharing                                                :slide:
   + A way of making persistent data structures efficiently
   + Lets do an example...
+*** Stack                                                             :slide:
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+  + s2 = push(s1, "Y")
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+  + s2 = push(s1, "Y")
+  + s3 = push(s2, "X")
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+  + s2 = push(s1, "Y")
+  + s3 = push(s2, "X")
+  + [v, s4] = pop(s3)
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+  + s2 = push(s1, "Y")
+  + s3 = push(s2, "X")
+  + [v, s4] = pop(s3) ;; v == "X", s4 == s2
+*** Stack                                                             :slide:
+  + s0 = empty_stack()
+  + s1 = push(s0, "Z")
+  + s2 = push(s1, "Y")
+  + s3 = push(s2, "X")
+  + [v, s4] = pop(s3) ;; v == "X", s4 == s2
+  + s5 = push(s4, "Q")
+
+*** Sorted Set                                                        :slide:
+*** Sorted Set                                                        :slide:
+  + s1 = ["a", "b", "c", "d", "f", "g", "h"]
+*** Sorted Set                                                        :slide:
+  + s1 = ["a", "b", "c", "d", "f", "g", "h"]
+  + s2 = insert(s, "e")
+*** Doubly-linked lists                                               :slide:
+*** Doubly-linked lists                                               :slide:
+  + ???
+*** Trees (again)                                                     :slide:
+*** Trees (again)                                                     :slide:
+  [[http://2.bp.blogspot.com/_8lmIIa0-Kqg/TThSYumxowI/AAAAAAAAIhw/93N1w50bumU/s1600/bates2.jpg]]
+
 *** Language support                                                  :slide:
-  + JavaScript (ES5) & Ruby
-    * Object.freeze();
-  + Java
-    * final keyword; // not really :(
-  + What about $your_favourite_language ?
-  + If no language support, are there libraries?
+  + If not provided with the core language, we can make a library
     * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
