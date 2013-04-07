@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-07T22:36+0100"/>
+<meta name="generated" content="2013-04-07T23:13+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -153,11 +153,15 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#sec-1-2">1.2 Higher-Order Functions</a>
 <ul>
-<li><a href="#sec-1-2-1">1.2.1 Haskell type notation</a></li>
-<li><a href="#sec-1-2-2">1.2.2 Map</a></li>
-<li><a href="#sec-1-2-3">1.2.3 Filter</a></li>
-<li><a href="#sec-1-2-4">1.2.4 Reduce</a></li>
-<li><a href="#sec-1-2-5">1.2.5 Compose</a></li>
+<li><a href="#sec-1-2-1">1.2.1 First-class functions</a></li>
+<li><a href="#sec-1-2-2">1.2.2 Closures and lambdas</a></li>
+<li><a href="#sec-1-2-3">1.2.3 Speaks your language?</a></li>
+<li><a href="#sec-1-2-4">1.2.4 Haskell type notation</a></li>
+<li><a href="#sec-1-2-5">1.2.5 Notes</a></li>
+<li><a href="#sec-1-2-6">1.2.6 Map</a></li>
+<li><a href="#sec-1-2-7">1.2.7 Filter</a></li>
+<li><a href="#sec-1-2-8">1.2.8 Reduce</a></li>
+<li><a href="#sec-1-2-9">1.2.9 Compose</a></li>
 </ul>
 </li>
 <li><a href="#sec-1-3">1.3 Laziness</a>
@@ -487,57 +491,149 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Haskell type notation &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> First-class functions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-1">
 
-
-
-
-<pre class="src src-haskell"><span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
-<span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
-<span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
-</pre>
-
 <ul>
-<li id="sec-1-2-1-1">Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span><br/>
-<ul>
-<li>Currying
+<li>Takes a function as an argument.
+</li>
+<li>Can return a function as a result.
 </li>
 </ul>
 
-</li>
-</ul>
 </div>
 
 </div>
 
 <div id="outline-container-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Closures and lambdas &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-2">
+
+<ul>
+<li>Not strictly necessary, but&hellip;
+</li>
+</ul>
 
 </div>
 
 </div>
 
 <div id="outline-container-1-2-3" class="outline-4">
-<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> Speaks your language? &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-3">
+
+<ul>
+<li>C
+<ul>
+<li>Kinda. Function pointers get you some of the way there.
+</li>
+</ul>
+
+</li>
+<li>C++
+<ul>
+<li>Yes. Check the <a href="http://sourceforge.net/projects/fcpp/">FC++</a> project. Also: lazyness, monads.
+</li>
+</ul>
+
+</li>
+<li>Python
+
+
+
+<pre class="src src-python"><span style="color: #FBDE2D;">import</span> functools
+</pre>
+
+</li>
+<li>Java
+<ul>
+<li>Yes but it's clunky.
+</li>
+</ul>
+
+</li>
+<li>JavaScript
+<ul>
+<li>Totally!
+</li>
+</ul>
+
+</li>
+</ul>
 
 </div>
 
 </div>
 
 <div id="outline-container-1-2-4" class="outline-4">
-<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> Haskell type notation &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-4">
+
+
+
+
+<pre class="src src-haskell"><span style="color: #ff1493;">cons</span> <span style="color: #D8FA3C;">::</span> a <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+<span style="color: #ff1493;">compose</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
+<span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
+<span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+<span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
+</pre>
 
 </div>
 
 </div>
 
 <div id="outline-container-1-2-5" class="outline-4">
-<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Compose &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Notes &nbsp;&nbsp;&nbsp;<span class="tag"><span class="notes">notes</span></span></h4>
 <div class="outline-text-4" id="text-1-2-5">
+
+<ul>
+<li>Currying
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-6" class="outline-4">
+<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-6">
+
+
+
+
+<pre class="src src-haskell"><span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
+</pre>
+
+<ul>
+<li>Takes a function and a list. Returns a new list with the results of applying the function to all elements of the list in order.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-7" class="outline-4">
+<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-7">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-8" class="outline-4">
+<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-8">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2-9" class="outline-4">
+<h4 id="sec-1-2-9"><span class="section-number-4">1.2.9</span> Compose &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<div class="outline-text-4" id="text-1-2-9">
 
 </div>
 </div>
@@ -583,7 +679,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-07T22:36+0100</p>
+<p class="date">Date: 2013-04-07T23:13+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

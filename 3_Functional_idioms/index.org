@@ -70,15 +70,39 @@
     * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
+*** First-class functions                                             :slide:
+  + Takes a function as an argument.
+  + Can return a function as a result.
+*** Closures and lambdas                                              :slide:
+  + Not strictly necessary, but...
+*** Speaks your language?                                             :slide:
+  + C
+    * Kinda. Function pointers get you some of the way there.
+  + C++
+    * Yes. Check the [[http://sourceforge.net/projects/fcpp/][FC++]] project. Also: lazyness, monads.
+  + Python
+    #+BEGIN_SRC python
+    import functools
+    #+END_SRC
+  + Java
+    * Yes but it's clunky.
+  + JavaScript
+    + Totally!
 *** Haskell type notation                                             :slide:
 #+BEGIN_SRC haskell
+cons :: a -> [a] -> [a]
+compose :: (b -> c) -> (a -> b) -> a -> c
 map :: (a -> b) -> [a] -> [b]
 filter :: (a -> Bool) -> [a] -> [a]
 reduce :: (a -> b -> a) -> a -> [b] -> a
 #+END_SRC
-**** Notes                                                            :notes:
-  + Currying
+*** Notes                                                             :notes:
+    + Currying
 *** Map                                                               :slide:
+#+BEGIN_SRC haskell
+map :: (a -> b) -> [a] -> [b]
+#+END_SRC
+  + Takes a function and a list. Returns a new list with the results of applying the function to all elements of the list in order.
 *** Filter                                                            :slide:
 *** Reduce                                                            :slide:
 *** Compose                                                           :slide:
