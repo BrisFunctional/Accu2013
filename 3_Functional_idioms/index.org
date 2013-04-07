@@ -2,8 +2,6 @@
 #+AUTHOR: Matthew Gilliard and Thom Leggett
 
 * Functional Idioms                                                   :slide:
-** Map Reduce                                                         :slide:
-*** Thom's notes                                                      :notes:
 ** Immutability                                                       :slide:
 *** Matthew's notes                                                   :notes:
   + A common objection - SO SLOW
@@ -72,7 +70,18 @@
     * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
-*** Thom's notes                                                      :notes:
+*** Haskell type notation                                             :slide:
+#+BEGIN_SRC haskell
+map :: (a -> b) -> [a] -> [b]
+filter :: (a -> Bool) -> [a] -> [a]
+reduce :: (a -> b -> a) -> a -> [b] -> a
+#+END_SRC
+**** Notes                                                            :notes:
+  + Currying
+*** Map                                                               :slide:
+*** Filter                                                            :slide:
+*** Reduce                                                            :slide:
+*** Compose                                                           :slide:
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:
   + See the example
