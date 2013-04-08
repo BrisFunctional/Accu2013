@@ -2,15 +2,13 @@
 #+AUTHOR: Matthew Gilliard and Thom Leggett
 
 * Functional Idioms                                                   :slide:
-** Map Reduce                                                         :slide:
-*** Thom's notes                                                      :notes:
 ** Immutability                                                       :slide:
+** Immutability                                                       :slide:
+  + Immutable things do not change over time
 *** Matthew's notes                                                   :notes:
   + A common objection - SO SLOW
   + Can be implemented with copy-on-write
-    * Write grabs a lock to prevent simultaneous writes
-    * Makes a complete copy
-    * Reads are never locked out
+    * Makes a complete copy on every change
   + Better to use persistent datastructures
 *** Persistent data structures                                        :slide:
   + "a data structure that always preserves the previous version of itself when it is modified."
@@ -65,8 +63,9 @@
   + ???
 *** Trees (again)                                                     :slide:
 *** Trees (again)                                                     :slide:
-  [[http://2.bp.blogspot.com/_8lmIIa0-Kqg/TThSYumxowI/AAAAAAAAIhw/93N1w50bumU/s1600/bates2.jpg]]
-
+  [[./branched_tree.png]]
+*** Trees (again)                                                     :slide:
+  [[./high_branching_factor.jpg]]
 *** Language support                                                  :slide:
   + If not provided with the core language, we can make a library
     * eg [[http://code.google.com/p/pcollections/]]
