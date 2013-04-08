@@ -5,14 +5,16 @@
 ;;              at the cursor
 ;; Ctrl-E       to evaluate the whole file
 
-;; prefix functions
+;; prefix notation
+(+ 2 2)
+
 (= 4 (+ 2 2))
 
 ;; define a var
 (def be-polite "Hello World!")
 
 ;; print it
-(println be-polite)
+(prn be-polite)
 
 ;; define a function in the same way
 (def add 
@@ -24,7 +26,11 @@
   (+ a b))
 
 ;; call it
-(= 4 (add 2 2))
+(add 2 2)
+
+(= 
+  (+ 2 2)
+  (add 2 2))
 
 ;; symbols are a bit like consts
 ;; they evaluate to their value
@@ -36,17 +42,18 @@
 
 ;; data structures
 ;; define a list (vector) with []
-
 [1, 2, 3, 4, 5, "six", :seven]
+
+;; commas optional
 [1 2 3 4 5 "six" :seven]
 
+;; lists are ordered
 (def a-list [1, 1, 2, 3, 5, 8, 13])
 (def another-list [13, 8, 5, 3, 2, 1, 1])
 (not (= a-list another-list))
 
 ;; dictionary
 ;; define a dictionary with {}
-
 {:key "value"}
 
 ;; use commas if that makes you feel more comfortable ;)
@@ -67,7 +74,7 @@
 
 (def add2 (n-ify add 2))
 
-(= 4 (add2 2))
+(add2 2)
 
 ;; clojure has an extensive built-in library
 ;;  complete with docs and source
@@ -101,6 +108,7 @@
   [0 1]
   )
 
+;check it
 (= 
   (take 42 fib)
   (take 42 fibo)
