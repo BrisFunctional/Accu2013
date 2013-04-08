@@ -1,37 +1,4 @@
-(ns sokoban.hints)
-
-
-;; maybe these will be useful?
-
-(defn do-move [[x y] d]
-  (condp = d
-    :n [x (dec y)]
-    :s [x (inc y)]
-    :w [(dec x) y]
-    :e [(inc x) y]))
-
-
-
-(defn blank? [world pos]
-  ((world :blanks) pos))
-
-
-
-(defn crate? [world pos]
-  ((world :crates) pos))
-
-
-
-(defn empty? [w p]
-  (and (blank? w p)
-       (not (crate? w p))))
-
-
-
-(defn move-crate [world old new]
-  (-> (disj (world :crates) old)
-      (conj new)))
-
+(ns sokoban.hard-mode)
 
 
 ;; a harder level, if you're ready

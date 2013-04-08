@@ -11,7 +11,7 @@
   (map #(/ 1 %) (next (range))))
 
 
-;; the first few terms
+;; check the first few terms
 (take 10 reciprocals)
 
 
@@ -21,6 +21,9 @@
   (drop-while #(> 3 (apply + %)) 
               (map #(take % reciprocals) (range))))
 
-;; This would be done using a `for` or a `while` without laziness
+;; This would be done using a `for` or a `while` in an imperative language
 ;; but using a lazy seq allows us to decouple
 ;; generation of the values, and the terminating condition
+
+;; functions that take a lazy sequence and do something iteratively to it
+;; can return a lazy sequence, too.
