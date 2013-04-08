@@ -33,20 +33,21 @@ the application of functions to arguments"
 *** Python.org                                                        :slide:
     + "the opposite of object-oriented programming"
     + [[http://docs.python.org/2/howto/functional.html]]
-*** Robert C Martin ([[http://twitter.com/UncleBob][@UncleBob]])                                       :slide:
+*** Robert C Martin                                                   :slide:
     + "is programming without assignment statements"
     + [[http://pragprog.com/magazines/2013-01/functional-programming-basics]]
+    + ([[http://twitter.com/UncleBob][@UncleBob)]]
 
 *** So what?                                                          :slide:
 **** Notes                                                            :notes:
      + Mainly uses immutable data types
-     + And side-effect-free functions
+     + Which, taken to its logical conclusion leads to side-effect-free functions
      + So:
        * order of execution is not important
        * functions can be memoized
        * concurrent programming becomes easier
 
-** An unfeasibly short introduction to clojure                        :slide:
+** An unfeasibly short introduction to Clojure                        :slide:
 
 *** Clooj                                                             :slide:
     http://j.mp/clooj-accu2013 or from USB stick.
