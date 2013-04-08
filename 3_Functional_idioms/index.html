@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-08T21:06+0100"/>
+<meta name="generated" content="2013-04-08T21:41+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -134,23 +134,23 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-2-1">1.2.1 Matthew's notes</a></li>
 <li><a href="#sec-1-2-2">1.2.2 Persistent data structures</a></li>
 <li><a href="#sec-1-2-3">1.2.3 Structural sharing</a></li>
-<li><a href="#sec-1-2-4">1.2.4 Stack</a></li>
-<li><a href="#sec-1-2-5">1.2.5 Stack</a></li>
-<li><a href="#sec-1-2-6">1.2.6 Stack</a></li>
-<li><a href="#sec-1-2-7">1.2.7 Stack</a></li>
-<li><a href="#sec-1-2-8">1.2.8 Stack</a></li>
-<li><a href="#sec-1-2-9">1.2.9 Stack</a></li>
-<li><a href="#sec-1-2-10">1.2.10 Stack</a></li>
-<li><a href="#sec-1-2-11">1.2.11 Stack</a></li>
-<li><a href="#sec-1-2-12">1.2.12 Sorted Set</a></li>
-<li><a href="#sec-1-2-13">1.2.13 Sorted Set</a></li>
-<li><a href="#sec-1-2-14">1.2.14 Sorted Set</a></li>
-<li><a href="#sec-1-2-15">1.2.15 Sorted Set</a></li>
-<li><a href="#sec-1-2-16">1.2.16 Doubly-linked lists</a></li>
-<li><a href="#sec-1-2-17">1.2.17 Doubly-linked lists</a></li>
-<li><a href="#sec-1-2-18">1.2.18 Trees (again)</a></li>
-<li><a href="#sec-1-2-19">1.2.19 Trees (again)</a></li>
-<li><a href="#sec-1-2-20">1.2.20 Trees (again)</a></li>
+<li><a href="#sec-1-2-4">1.2.4 one: stack</a></li>
+<li><a href="#sec-1-2-5">1.2.5 one: stack</a></li>
+<li><a href="#sec-1-2-6">1.2.6 one: stack</a></li>
+<li><a href="#sec-1-2-7">1.2.7 one: stack</a></li>
+<li><a href="#sec-1-2-8">1.2.8 one: stack</a></li>
+<li><a href="#sec-1-2-9">1.2.9 one: stack</a></li>
+<li><a href="#sec-1-2-10">1.2.10 one: stack</a></li>
+<li><a href="#sec-1-2-11">1.2.11 one: stack</a></li>
+<li><a href="#sec-1-2-12">1.2.12 two: sorted set</a></li>
+<li><a href="#sec-1-2-13">1.2.13 two: sorted set</a></li>
+<li><a href="#sec-1-2-14">1.2.14 two: sorted set</a></li>
+<li><a href="#sec-1-2-15">1.2.15 two: sorted set</a></li>
+<li><a href="#sec-1-2-16">1.2.16 three: doubly-linked lists</a></li>
+<li><a href="#sec-1-2-17">1.2.17 three: doubly-linked lists</a></li>
+<li><a href="#sec-1-2-18">1.2.18 four: trees (again)</a></li>
+<li><a href="#sec-1-2-19">1.2.19 four: trees (again)</a></li>
+<li><a href="#sec-1-2-20">1.2.20 four: trees (again)</a></li>
 <li><a href="#sec-1-2-21">1.2.21 Language support</a></li>
 </ul>
 </li>
@@ -173,7 +173,9 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-4">1.4 Laziness</a>
 <ul>
 <li><a href="#sec-1-4-1">1.4.1 Matthew's notes</a></li>
-</ul></li>
+</ul>
+</li>
+<li><a href="#sec-1-5">1.5 <del>Iteration</del> Recursion</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2 org-html-slideshow incantations</a></li>
@@ -266,7 +268,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-4" class="outline-4">
-<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-4">
 
 </div>
@@ -274,7 +276,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-5" class="outline-4">
-<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-5">
 
 
@@ -288,7 +290,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-6" class="outline-4">
-<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-6">
 
 
@@ -303,7 +305,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-7" class="outline-4">
-<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-7">
 
 
@@ -319,7 +321,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-8" class="outline-4">
-<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-8">
 
 
@@ -336,7 +338,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-9" class="outline-4">
-<h4 id="sec-1-2-9"><span class="section-number-4">1.2.9</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-9"><span class="section-number-4">1.2.9</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-9">
 
 
@@ -354,7 +356,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-10" class="outline-4">
-<h4 id="sec-1-2-10"><span class="section-number-4">1.2.10</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-10"><span class="section-number-4">1.2.10</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-10">
 
 
@@ -372,7 +374,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-11" class="outline-4">
-<h4 id="sec-1-2-11"><span class="section-number-4">1.2.11</span> Stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-11"><span class="section-number-4">1.2.11</span> one: stack &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-11">
 
 
@@ -392,7 +394,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-12" class="outline-4">
-<h4 id="sec-1-2-12"><span class="section-number-4">1.2.12</span> Sorted Set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-12"><span class="section-number-4">1.2.12</span> two: sorted set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-12">
 
 </div>
@@ -400,7 +402,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-13" class="outline-4">
-<h4 id="sec-1-2-13"><span class="section-number-4">1.2.13</span> Sorted Set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-13"><span class="section-number-4">1.2.13</span> two: sorted set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-13">
 
 
@@ -414,7 +416,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-14" class="outline-4">
-<h4 id="sec-1-2-14"><span class="section-number-4">1.2.14</span> Sorted Set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-14"><span class="section-number-4">1.2.14</span> two: sorted set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-14">
 
 
@@ -429,7 +431,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-15" class="outline-4">
-<h4 id="sec-1-2-15"><span class="section-number-4">1.2.15</span> Sorted Set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-15"><span class="section-number-4">1.2.15</span> two: sorted set &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-15">
 
 
@@ -445,7 +447,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-16" class="outline-4">
-<h4 id="sec-1-2-16"><span class="section-number-4">1.2.16</span> Doubly-linked lists &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-16"><span class="section-number-4">1.2.16</span> three: doubly-linked lists &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-16">
 
 </div>
@@ -453,7 +455,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-17" class="outline-4">
-<h4 id="sec-1-2-17"><span class="section-number-4">1.2.17</span> Doubly-linked lists &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-17"><span class="section-number-4">1.2.17</span> three: doubly-linked lists &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-17">
 
 <ul>
@@ -466,7 +468,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-18" class="outline-4">
-<h4 id="sec-1-2-18"><span class="section-number-4">1.2.18</span> Trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-18"><span class="section-number-4">1.2.18</span> four: trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-18">
 
 </div>
@@ -474,7 +476,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-19" class="outline-4">
-<h4 id="sec-1-2-19"><span class="section-number-4">1.2.19</span> Trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-19"><span class="section-number-4">1.2.19</span> four: trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-19">
 
 <p>  <img src="./branched_tree.png"  alt="./branched_tree.png" />
@@ -483,7 +485,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-2-20" class="outline-4">
-<h4 id="sec-1-2-20"><span class="section-number-4">1.2.20</span> Trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-20"><span class="section-number-4">1.2.20</span> four: trees (again) &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-20">
 
 <p>  <img src="./high_branching_factor.jpg"  alt="./high_branching_factor.jpg" />
@@ -748,6 +750,15 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 
 </div>
 </div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> <del>Iteration</del> Recursion &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+</div>
 </div>
 
 </div>
@@ -768,7 +779,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-08T21:06+0100</p>
+<p class="date">Date: 2013-04-08T21:41+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

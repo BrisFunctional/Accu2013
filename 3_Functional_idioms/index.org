@@ -17,30 +17,30 @@
 *** Structural sharing                                                :slide:
   + A way of making persistent data structures efficiently
   + Lets do an example...
-*** Stack                                                             :slide:
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
   + s2 = push(s1, "Y")
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
   + s2 = push(s1, "Y")
   + s3 = push(s2, "X")
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
@@ -48,7 +48,7 @@
   + s3 = push(s2, "X")
   + [v, s4] = pop(s3)
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
@@ -56,7 +56,7 @@
   + s3 = push(s2, "X")
   + [v, s4] = pop(s3) ;; v == "X", s4 == s2
     #+END_SRC
-*** Stack                                                             :slide:
+*** one: stack                                                        :slide:
     #+BEGIN_SRC python
   + s0 = empty_stack()
   + s1 = push(s0, "Z")
@@ -66,29 +66,29 @@
   + s5 = push(s4, "Q")
     #+END_SRC
 
-*** Sorted Set                                                        :slide:
-*** Sorted Set                                                        :slide:
+*** two: sorted set                                                   :slide:
+*** two: sorted set                                                   :slide:
     #+BEGIN_SRC python
   + s1 = ["a", "b", "c", "d", "f", "g", "h"]
     #+END_SRC
-*** Sorted Set                                                        :slide:
+*** two: sorted set                                                   :slide:
     #+BEGIN_SRC python
   + s1 = ["a", "b", "c", "d", "f", "g", "h"]
   + contains?(s1, "e")
     #+END_SRC
-*** Sorted Set                                                        :slide:
+*** two: sorted set                                                   :slide:
     #+BEGIN_SRC python
   + s1 = ["a", "b", "c", "d", "f", "g", "h"]
   + contains?(s1, "e")
   + s2 = insert(s, "e")
     #+END_SRC
-*** Doubly-linked lists                                               :slide:
-*** Doubly-linked lists                                               :slide:
+*** three: doubly-linked lists                                        :slide:
+*** three: doubly-linked lists                                        :slide:
   + ???
-*** Trees (again)                                                     :slide:
-*** Trees (again)                                                     :slide:
+*** four: trees (again)                                               :slide:
+*** four: trees (again)                                               :slide:
   [[./branched_tree.png]]
-*** Trees (again)                                                     :slide:
+*** four: trees (again)                                               :slide:
   [[./high_branching_factor.jpg]]
 *** Language support                                                  :slide:
   + If not provided with the core language, we can make a library
@@ -170,6 +170,8 @@
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:
   + See the example
+
+** +Iteration+ Recursion                                              :slide:
 
 * org-html-slideshow incantations
 #+TAGS: slide(s) notes(n)
