@@ -26,6 +26,39 @@
 ;; call it
 (= 4 (add 2 2))
 
+;; symbols are a bit like consts
+;; they evaluate to their value
+*file*
+
+;; keywords are symbols that evaluate to themselves
+;; they always start with a :
+:keyword
+
+;; data structures
+;; define a list (vector) with []
+
+[1, 2, 3, 4, 5, "six", :seven]
+[1 2 3 4 5 "six" :seven]
+
+(def a-list [1, 1, 2, 3, 5, 8, 13])
+(def another-list [13, 8, 5, 3, 2, 1, 1])
+(not (= a-list another-list))
+
+;; dictionary
+;; define a dictionary with {}
+
+{:key "value"}
+
+;; use commas if that makes you feel more comfortable ;)
+(def a-dict {:key1 "value1", :key2 "value2", :key3 "value3"})
+(def another-dict {:key1 "value1" :key2 "value2" :key3 "value3"})
+(= a-dict another-dict)
+
+;; set
+(def a-set #{1, 2, 3})
+(def another-set #{3, 2, 1})
+(= a-set another-set)
+
 ;; functions can be taken as arguments and
 ;;  returned as a result
 ;;  can you spot the closure?
