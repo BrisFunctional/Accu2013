@@ -73,8 +73,10 @@
 *** First-class functions                                             :slide:
   + Takes a function as an argument.
   + Can return a function as a result.
+
 *** Closures and lambdas                                              :slide:
   + Not strictly necessary, but...
+
 *** Speaks your language?                                             :slide:
   + C
     * Kinda. Function pointers get you some of the way there.
@@ -88,37 +90,42 @@
     * Yes but it's clunky.
   + JavaScript
     + Totally!
+
 *** Haskell type notation                                             :slide:
   #+BEGIN_SRC haskell
-  cons :: a -> [a] -> [a]
-  comp :: (b -> c) -> (a -> b) -> a -> c
-  map :: (a -> b) -> [a] -> [b]
-  filter :: (a -> Bool) -> [a] -> [a]
-  reduce :: (a -> b -> a) -> a -> [b] -> a
+  one :: a -> [a] -> [a]
+  two :: (b -> c) -> (a -> b) -> a -> c
+  three :: (a -> b) -> [a] -> [b]
+  four :: (a -> Bool) -> [a] -> [a]
+  five :: (a -> b -> a) -> a -> [b] -> a
   #+END_SRC
 **** Notes                                                            :notes:
    + Currying
-*** Composition                                                       :slide:
+
+*** two: Composition                                                  :slide:
   #+BEGIN_SRC haskell
   comp :: (b -> c) -> (a -> b) -> a -> c
   #+END_SRC
   + Takes two functions, f and g.
   + Returns a new function x -> f(g(x)).
-*** Map                                                               :slide:
+
+*** three: Map                                                        :slide:
   #+BEGIN_SRC haskell
   map :: (a -> b) -> [a] -> [b]
   #+END_SRC
   + Takes a function and a list.
   + Returns a new list with the results of applying the function to all
     elements of the list in order.
-*** Filter                                                            :slide:
+
+*** four: Filter                                                      :slide:
   #+BEGIN_SRC haskell
   filter :: (a -> Bool) -> [a] -> [a]
   #+END_SRC
   + Takes a predicate and a list.
   + Returns a new list containing only items which, when passed to the
     predicate, the predicate returned true.
-*** Reduce                                                            :slide:
+
+*** five: Reduce                                                      :slide:
   #+BEGIN_SRC haskell
   reduce :: (a -> b -> a) -> a -> [b] -> a
   #+END_SRC
@@ -127,6 +134,7 @@
   + Returns a value obtained by passing the first item of the list and the
     initial value to the function, then calls the function with the result
     of the last call and the second item of the list etc.
+
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:
   + See the example

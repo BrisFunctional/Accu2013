@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-08T00:00+0100"/>
+<meta name="generated" content="2013-04-08T13:52+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -69,7 +69,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012  Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -161,10 +161,10 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1-2-4-1">1.2.4.1 Notes</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-2-5">1.2.5 Composition</a></li>
-<li><a href="#sec-1-2-6">1.2.6 Map</a></li>
-<li><a href="#sec-1-2-7">1.2.7 Filter</a></li>
-<li><a href="#sec-1-2-8">1.2.8 Reduce</a></li>
+<li><a href="#sec-1-2-5">1.2.5 two: Composition</a></li>
+<li><a href="#sec-1-2-6">1.2.6 three: Map</a></li>
+<li><a href="#sec-1-2-7">1.2.7 four: Filter</a></li>
+<li><a href="#sec-1-2-8">1.2.8 five: Reduce</a></li>
 </ul>
 </li>
 <li><a href="#sec-1-3">1.3 Laziness</a>
@@ -504,6 +504,7 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 
 </div>
@@ -516,6 +517,7 @@ for the JavaScript code in this tag.
 <li>Not strictly necessary, but&hellip;
 </li>
 </ul>
+
 
 </div>
 
@@ -544,7 +546,7 @@ for the JavaScript code in this tag.
 
 
 
-<pre class="src src-python"><span style="color: #FBDE2D;">import</span> functools
+<pre class="example">import functools
 </pre>
 
 </li>
@@ -564,6 +566,7 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 
 </div>
@@ -575,11 +578,11 @@ for the JavaScript code in this tag.
 
 
 
-<pre class="src src-haskell"><span style="color: #ff1493;">cons</span> <span style="color: #D8FA3C;">::</span> a <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
-<span style="color: #ff1493;">comp</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
-<span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
-<span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
-<span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
+<pre class="example">one :: a -&gt; [a] -&gt; [a]
+two :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+three :: (a -&gt; b) -&gt; [a] -&gt; [b]
+four :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 </pre>
 
 
@@ -594,19 +597,20 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-1-2-5" class="outline-4">
-<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> Composition &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-5"><span class="section-number-4">1.2.5</span> two: Composition &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-5">
 
 
 
 
-<pre class="src src-haskell"><span style="color: #ff1493;">comp</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
+<pre class="example">comp :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
 </pre>
 
 <ul>
@@ -616,18 +620,19 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 
 </div>
 
 <div id="outline-container-1-2-6" class="outline-4">
-<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-6"><span class="section-number-4">1.2.6</span> three: Map &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-6">
 
 
 
 
-<pre class="src src-haskell"><span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
+<pre class="example">map :: (a -&gt; b) -&gt; [a] -&gt; [b]
 </pre>
 
 <ul>
@@ -638,18 +643,19 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 
 </div>
 
 <div id="outline-container-1-2-7" class="outline-4">
-<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-7"><span class="section-number-4">1.2.7</span> four: Filter &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-7">
 
 
 
 
-<pre class="src src-haskell"><span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+<pre class="example">filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
 </pre>
 
 <ul>
@@ -660,18 +666,19 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
+
 </div>
 
 </div>
 
 <div id="outline-container-1-2-8" class="outline-4">
-<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
+<h4 id="sec-1-2-8"><span class="section-number-4">1.2.8</span> five: Reduce &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h4>
 <div class="outline-text-4" id="text-1-2-8">
 
 
 
 
-<pre class="src src-haskell"><span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
+<pre class="example">reduce :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 </pre>
 
 <ul>
@@ -683,6 +690,7 @@ for the JavaScript code in this tag.
     of the last call and the second item of the list etc.
 </li>
 </ul>
+
 
 </div>
 </div>
@@ -728,9 +736,9 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-08T00:00+0100</p>
+<p class="date">Date: 2013-04-08T13:52+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.4 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.1 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>
