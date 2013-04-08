@@ -17,7 +17,7 @@
     + What do you know about functional programming?
     + What languages do you use day-to-day?
 
-** What is functional programming?                                    :slide:
+** What is functional programming?                                    :slide:#
 *** Notes                                                             :notes:
     + Languages on post-its.
     + Functional to dysfunctional scale.

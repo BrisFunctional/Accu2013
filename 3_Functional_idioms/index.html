@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-08T13:55+0100"/>
+<meta name="generated" content="2013-04-08T14:59+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -490,7 +490,8 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-2"><span class="section-number-3">1.2</span> Higher-Order Functions &nbsp;&nbsp;&nbsp;<span class="tag"><span class="slide">slide</span></span></h3>
 <div class="outline-text-3" id="text-1-2">
 
-
+<p>   <img src="http://upload.wikimedia.org/wikipedia/commons/5/5a/Left-fold-transformation.png"  alt="http://upload.wikimedia.org/wikipedia/commons/5/5a/Left-fold-transformation.png" />
+</p>
 </div>
 
 <div id="outline-container-1-2-1" class="outline-4">
@@ -579,10 +580,15 @@ for the JavaScript code in this tag.
 
 
 <pre class="src src-haskell"><span style="color: #ff1493;">one</span> <span style="color: #D8FA3C;">::</span> a <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+
 <span style="color: #ff1493;">two</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
+
 <span style="color: #ff1493;">three</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
+
 <span style="color: #ff1493;">four</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+
 <span style="color: #ff1493;">five</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
+
 </pre>
 
 
@@ -639,7 +645,7 @@ for the JavaScript code in this tag.
 <li>Takes a function and a list.
 </li>
 <li>Returns a new list with the results of applying the function to all
-    elements of the list in order.
+      elements of the list in order.
 </li>
 </ul>
 
@@ -662,7 +668,7 @@ for the JavaScript code in this tag.
 <li>Takes a predicate and a list.
 </li>
 <li>Returns a new list containing only items which, when passed to the
-    predicate, the predicate returned true.
+      predicate, the predicate returned true.
 </li>
 </ul>
 
@@ -683,11 +689,11 @@ for the JavaScript code in this tag.
 
 <ul>
 <li>Takes a function that combines two values in some way, an initial value
-    and a list.
+      and a list.
 </li>
 <li>Returns a value obtained by passing the first item of the list and the
-    initial value to the function, then calls the function with the result
-    of the last call and the second item of the list etc.
+      initial value to the function, then calls the function with the result
+      of the last call and the second item of the list etc.
 </li>
 </ul>
 
@@ -736,7 +742,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-08T13:55+0100</p>
+<p class="date">Date: 2013-04-08T14:59+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.1 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

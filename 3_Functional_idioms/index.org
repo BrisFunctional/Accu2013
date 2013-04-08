@@ -70,70 +70,77 @@
     * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
+   http://upload.wikimedia.org/wikipedia/commons/5/5a/Left-fold-transformation.png
 *** First-class functions                                             :slide:
-  + Takes a function as an argument.
-  + Can return a function as a result.
+    + Takes a function as an argument.
+    + Can return a function as a result.
 
 *** Closures and lambdas                                              :slide:
-  + Not strictly necessary, but...
+    + Not strictly necessary, but...
 
 *** Speaks your language?                                             :slide:
-  + C
-    * Kinda. Function pointers get you some of the way there.
-  + C++
-    * Yes. Check the [[http://sourceforge.net/projects/fcpp/][FC++]] project. Also: lazyness, monads.
-  + Python
-    #+BEGIN_SRC python
-    import functools
-    #+END_SRC
-  + Java
-    * Yes but it's clunky.
-  + JavaScript
-    + Totally!
+    + C
+      * Kinda. Function pointers get you some of the way there.
+    + C++
+      * Yes. Check the [[http://sourceforge.net/projects/fcpp/][FC++]] project. Also: lazyness, monads.
+    + Python
+      #+BEGIN_SRC python
+      import functools
+      #+END_SRC
+    + Java
+      * Yes but it's clunky.
+    + JavaScript
+      + Totally!
 
 *** Haskell type notation                                             :slide:
-  #+BEGIN_SRC haskell
-  one :: a -> [a] -> [a]
-  two :: (b -> c) -> (a -> b) -> a -> c
-  three :: (a -> b) -> [a] -> [b]
-  four :: (a -> Bool) -> [a] -> [a]
-  five :: (a -> b -> a) -> a -> [b] -> a
-  #+END_SRC
+    #+BEGIN_SRC haskell
+
+    one :: a -> [a] -> [a]
+
+    two :: (b -> c) -> (a -> b) -> a -> c
+
+    three :: (a -> b) -> [a] -> [b]
+
+    four :: (a -> Bool) -> [a] -> [a]
+
+    five :: (a -> b -> a) -> a -> [b] -> a
+
+    #+END_SRC
 **** Notes                                                            :notes:
-   + Currying
+     + Currying
 
 *** two: Composition                                                  :slide:
-  #+BEGIN_SRC haskell
-  comp :: (b -> c) -> (a -> b) -> a -> c
-  #+END_SRC
-  + Takes two functions, f and g.
-  + Returns a new function x -> f(g(x)).
+    #+BEGIN_SRC haskell
+    comp :: (b -> c) -> (a -> b) -> a -> c
+    #+END_SRC
+    + Takes two functions, f and g.
+    + Returns a new function x -> f(g(x)).
 
 *** three: Map                                                        :slide:
-  #+BEGIN_SRC haskell
-  map :: (a -> b) -> [a] -> [b]
-  #+END_SRC
-  + Takes a function and a list.
-  + Returns a new list with the results of applying the function to all
-    elements of the list in order.
+    #+BEGIN_SRC haskell
+    map :: (a -> b) -> [a] -> [b]
+    #+END_SRC
+    + Takes a function and a list.
+    + Returns a new list with the results of applying the function to all
+      elements of the list in order.
 
 *** four: Filter                                                      :slide:
-  #+BEGIN_SRC haskell
-  filter :: (a -> Bool) -> [a] -> [a]
-  #+END_SRC
-  + Takes a predicate and a list.
-  + Returns a new list containing only items which, when passed to the
-    predicate, the predicate returned true.
+    #+BEGIN_SRC haskell
+    filter :: (a -> Bool) -> [a] -> [a]
+    #+END_SRC
+    + Takes a predicate and a list.
+    + Returns a new list containing only items which, when passed to the
+      predicate, the predicate returned true.
 
 *** five: Reduce                                                      :slide:
-  #+BEGIN_SRC haskell
-  reduce :: (a -> b -> a) -> a -> [b] -> a
-  #+END_SRC
-  + Takes a function that combines two values in some way, an initial value
-    and a list.
-  + Returns a value obtained by passing the first item of the list and the
-    initial value to the function, then calls the function with the result
-    of the last call and the second item of the list etc.
+    #+BEGIN_SRC haskell
+    reduce :: (a -> b -> a) -> a -> [b] -> a
+    #+END_SRC
+    + Takes a function that combines two values in some way, an initial value
+      and a list.
+    + Returns a value obtained by passing the first item of the list and the
+      initial value to the function, then calls the function with the result
+      of the last call and the second item of the list etc.
 
 ** Laziness                                                           :slide:
 *** Matthew's notes                                                   :notes:

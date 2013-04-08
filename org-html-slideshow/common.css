@@ -13,6 +13,8 @@ span.tag {
 
 pre {
    font-family: Monaco, "Courier New", monospace;
+   color: #fff;
+   background-color: #000;
 }
 
 #c-panel {
