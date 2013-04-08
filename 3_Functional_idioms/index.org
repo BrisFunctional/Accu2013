@@ -95,7 +95,12 @@
     * eg [[http://code.google.com/p/pcollections/]]
 
 ** Higher-Order Functions                                             :slide:
-   http://upload.wikimedia.org/wikipedia/commons/5/5a/Left-fold-transformation.png
+   [[./Left-fold-transformation.png]]
+
+   [[./Right-fold-transformation.png]]
+
+
+   [[http://en.wikipedia.org/wiki/Fold_(higher-order_function)]]
 *** First-class functions                                             :slide:
     + Takes a function as an argument.
     + Can return a function as a result.
