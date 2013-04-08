@@ -24,6 +24,7 @@ pre {
    font-size: 12pt;
    position: fixed;
    right: 0px;
+   padding: 3px 3px 3px 3px;
 }
 
 #c-panel a {
