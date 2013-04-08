@@ -4,29 +4,24 @@
 (def surveys (json/read-str (slurp "startup.json")
                             :key-fn keyword))
 
-(defn classify [score]
-    (condp <= score 
+(defn classify [survey]
+    (condp <= (survey :score)
       9 :promoter
       7 :passive
       :detractor))
- 
-(def classified 
-  (map (comp classify #(:score %)) surveys))
 
-(defn group [a b]
-  (let [c (assoc a :items (inc (:items a)))]
-    (condp = b
-      :promoter (assoc c :promoters (inc (:promoters c)))
-      :passive c
-      :detractor (assoc c :detractors (inc (:detractors c))))))
+(def classified (map classify surveys))
 
-(def counts 
-  (reduce group {:items 0 :promoters 0 :detractors 0} classified))
+(def n
+  (count classified))
+
+(def promoters
+  (count (filter (partial = :promoter) classified)))
+
+(def detractors
+  (count (filter (partial = :detractor) classified)))
 
 (def nps
-  (* 100 
-     (/ 
-       (- (counts :promoters) (counts :detractors)) 
-       (counts :items))))
+  (* 100 (/ (- promoters detractors) n)))
 
-(float nps)
+(prn (float nps))
