@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Functional idioms"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2013-04-08T13:52+0100"/>
+<meta name="generated" content="2013-04-08T13:55+0100"/>
 <meta name="author" content="Matthew Gilliard and Thom Leggett"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -546,7 +546,7 @@ for the JavaScript code in this tag.
 
 
 
-<pre class="example">import functools
+<pre class="src src-python"><span style="color: #FBDE2D;">import</span> functools
 </pre>
 
 </li>
@@ -578,11 +578,11 @@ for the JavaScript code in this tag.
 
 
 
-<pre class="example">one :: a -&gt; [a] -&gt; [a]
-two :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
-three :: (a -&gt; b) -&gt; [a] -&gt; [b]
-four :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
-five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
+<pre class="src src-haskell"><span style="color: #ff1493;">one</span> <span style="color: #D8FA3C;">::</span> a <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+<span style="color: #ff1493;">two</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
+<span style="color: #ff1493;">three</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
+<span style="color: #ff1493;">four</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
+<span style="color: #ff1493;">five</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
 </pre>
 
 
@@ -610,7 +610,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 
 
 
-<pre class="example">comp :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+<pre class="src src-haskell"><span style="color: #ff1493;">comp</span> <span style="color: #D8FA3C;">::</span> (b <span style="color: #D8FA3C;">-&gt;</span> c) <span style="color: #D8FA3C;">-&gt;</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> c
 </pre>
 
 <ul>
@@ -632,7 +632,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 
 
 
-<pre class="example">map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+<pre class="src src-haskell"><span style="color: #ff1493;">map</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [b]
 </pre>
 
 <ul>
@@ -655,7 +655,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 
 
 
-<pre class="example">filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+<pre class="src src-haskell"><span style="color: #ff1493;">filter</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> <span style="color: #D8FA3C;">Bool</span>) <span style="color: #D8FA3C;">-&gt;</span> [a] <span style="color: #D8FA3C;">-&gt;</span> [a]
 </pre>
 
 <ul>
@@ -678,7 +678,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 
 
 
-<pre class="example">reduce :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
+<pre class="src src-haskell"><span style="color: #ff1493;">reduce</span> <span style="color: #D8FA3C;">::</span> (a <span style="color: #D8FA3C;">-&gt;</span> b <span style="color: #D8FA3C;">-&gt;</span> a) <span style="color: #D8FA3C;">-&gt;</span> a <span style="color: #D8FA3C;">-&gt;</span> [b] <span style="color: #D8FA3C;">-&gt;</span> a
 </pre>
 
 <ul>
@@ -736,7 +736,7 @@ five :: (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-04-08T13:52+0100</p>
+<p class="date">Date: 2013-04-08T13:55+0100</p>
 <p class="author">Author: Matthew Gilliard and Thom Leggett</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.1 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
