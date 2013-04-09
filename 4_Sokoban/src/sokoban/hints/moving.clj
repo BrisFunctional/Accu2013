@@ -19,6 +19,8 @@
 
 ;; MOVING A CRATE
 
-(defn move-crate [world old new]
+(defn move-crate 
+  "In world moves a crate from old to new"
+  [world old new]
   (-> (disj (world :crates) old)
       (conj new)))
