@@ -27,7 +27,7 @@
     + [[http://en.wikipedia.org/wiki/Functional_Programming]]
 *** John Hughes (Why Functional Programming Matters)                  :slide:
     + "Functional programming is so called because its fundamental operation is
-the application of functions to arguments"
+       the application of functions to arguments"
     + [[http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html]]
 *** Python.org                                                        :slide:
     + "the opposite of object-oriented programming"

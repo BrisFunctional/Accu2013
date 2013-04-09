@@ -5,7 +5,7 @@
 
 body {
    margin: 18pt;
-   font-size: 24pt;
+   font-size: 36pt;
 }
 
 /* Use all headings as slide titles, regardless of level. */
@@ -38,6 +38,10 @@ h6 {
 
 li {
    margin: 12pt;
+}
+
+pre {
+    font-size: 24pt;
 }
 
 /* Center embedded images. */
