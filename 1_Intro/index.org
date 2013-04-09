@@ -10,35 +10,36 @@
       * Twitter: [[https://twitter.com/thomleggett][@thomleggett]]
     + BrisFunctional
       * Twitter: [[http://twitter.com/BrisFunctional][@BrisFunctional]]
-      * Web: [[http://brisfunctional.github.com]]
+      * Web: [[http://brisfunctional.github.io]]
 
 *** Who are you?                                                      :slide:
     + Introduce yourselves to your table.
     + What do you know about functional programming?
     + What languages do you use day-to-day?
 
-** What is functional programming?                                    :slide:
+** What is Functional Programming?                                    :slide:
 *** Notes                                                             :notes:
     + Languages on post-its.
     + Functional to dysfunctional scale.
-    + Functional definitions.
     + Next steps.
+*** Wikipedia                                                         :slide:
+    + "[FP] treats computation as the evaluation of mathematical functions and avoids state and mutable data."
+    + [[http://en.wikipedia.org/wiki/Functional_Programming]]
 *** John Hughes (Why Functional Programming Matters)                  :slide:
     + "Functional programming is so called because its fundamental operation is
 the application of functions to arguments"
     + [[http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html]]
-*** Wikipedia                                                         :slide:
-    + "[FP] treats computation as the evaluation of mathematical functions and avoids state and mutable data."
-    + [[http://en.wikipedia.org/wiki/Functional_Programming]]
 *** Python.org                                                        :slide:
     + "the opposite of object-oriented programming"
     + [[http://docs.python.org/2/howto/functional.html]]
 *** Robert C Martin                                                   :slide:
     + "is programming without assignment statements"
     + [[http://pragprog.com/magazines/2013-01/functional-programming-basics]]
-    + ([[http://twitter.com/UncleBob][@UncleBob)]]
+    + [[http://twitter.com/UncleBobMartin][(@UncleBobMartin)]]
 
 *** So what?                                                          :slide:
+*** So what?                                                          :slide:
+[[./Transistor_Count_and_Moore's_Law_-_2011.svg.png]]
 **** Notes                                                            :notes:
      + Mainly uses immutable data types
      + Which, taken to its logical conclusion leads to side-effect-free functions
