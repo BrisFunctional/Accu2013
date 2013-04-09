@@ -51,7 +51,9 @@ the application of functions to arguments"
 ** An unfeasibly short introduction to Clojure                        :slide:
 
 *** Clooj                                                             :slide:
-    http://j.mp/clooj-accu2013 or from USB stick.
+
+    Copy the Accu2013 folder from the USB stick.
+
     + Simple self-contained IDE for clojure.
     + Project, file and repl.
     + Rough edges.
@@ -67,7 +69,7 @@ the application of functions to arguments"
     #+END_SRC
 
 *** Clojure                                                           :slide:
-    + Find 1_Intro/intro-to-clojure directory.
+    + Find =1_Intro/intro-to-clojure= directory.
     + Open project.clj in your shiny new clooj installation.
 
 * org-html-slideshow incantations
